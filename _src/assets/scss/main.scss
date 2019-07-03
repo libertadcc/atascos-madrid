@@ -16,11 +16,10 @@ body {
 }
 
 .header__title {
-  font-size: 30px;
-  @media all and (min-width){
+  font-size: 35px;
+  @media all and (min-width: 768px){
     font-size: 50px;
   }
-
 }
 
 .main {

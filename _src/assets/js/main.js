@@ -29,6 +29,7 @@ const atasco = () => {
 }
 btn.addEventListener('click', atasco);
 
+const copied = document.querySelector('.copied');
 const twitter = document.querySelector('.twitter');
 const twitterLink = 'https://twitter.com/intent/tweet';
 const hashtags = 'MadridCentral';
@@ -47,6 +48,10 @@ function copy() {
   textArea.select();
   document.execCommand("Copy");
   textArea.remove();
+  copied.classList.remove('hidden');
+  setTimeout(function(){
+    copied.classList.add('hidden')
+  }, 1500);
 }
 
 twitter.addEventListener('click', createTweet);
