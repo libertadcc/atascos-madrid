@@ -14,6 +14,7 @@ const emojis = [
   '🚗', '🚚', '🚙', '🚒',
   '🚛', '💨', '🛵', '🛵'
 ];
+
 const atasco = () => {
   let cars='';
   for (let i = 1; i<100; i++) {
@@ -34,6 +35,16 @@ const content =  '@AlmeidaPP_';
 const createTweet = () => {
   const tweet = `${twitterLink}?text=${text.innerHTML};hashtags=${hashtags}%20${content}`;
   twitter.href = tweet;
+}
+
+function copy() {
+  let copyText = document.getElementById("mainText");
+  var textArea = document.createElement("textarea");
+  textArea.value = copyText.textContent;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("Copy");
+  textArea.remove();
 }
 
 twitter.addEventListener('click', createTweet);
