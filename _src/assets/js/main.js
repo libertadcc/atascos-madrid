@@ -2,6 +2,7 @@
 
 const btn = document.querySelector('.btn');
 const text = document.querySelector('.text');
+const copyBtn = document.querySelector('.copy');
 
 const emojis = [
   '🚜', '🚗', '🛴', '💨',
@@ -21,10 +22,11 @@ const atasco = () => {
     cars += emojis[Math.floor(Math.random() *  emojis.length)]
   }
   twitter.classList.remove('hidden');
+  copyBtn.classList.remove('hidden');
   return (
     text.innerHTML = cars
   )
-  }
+}
 btn.addEventListener('click', atasco);
 
 const twitter = document.querySelector('.twitter');
@@ -48,3 +50,4 @@ function copy() {
 }
 
 twitter.addEventListener('click', createTweet);
+copyBtn.addEventListener('click', copy);
