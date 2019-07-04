@@ -36,7 +36,7 @@ const hashtags = 'MadridCentral';
 const content =  '@AlmeidaPP_';
 
 const createTweet = () => {
-  const tweet = `${twitterLink}?text=${text.innerHTML};hashtags=${hashtags}%20${content}`;
+  const tweet = `${twitterLink}?text=${text.innerHTML}%20${content}%20#MadridCentral`;
   twitter.href = tweet;
 }
 
